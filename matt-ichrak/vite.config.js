@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue()
   ],
-  base: "./"
+  base: process.env.NODE_ENV === 'production' ? './' : '/'
   ,
   resolve: {
     alias: {
